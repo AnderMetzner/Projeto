@@ -14,13 +14,15 @@ class Noticias extends Migration
     public function up()
     {
         Schema::create('noticias', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id_noticia');
             $table->string('titulo');
-            $table->string('conteudo');
+            $table->text('conteudo');
             $table->string('referencias');
             $table->string('fonte');
             $table->string('placares');
-            $table->dateTime('data_da_publicacao');
+            $table->dateTime('data_publicacao');
+            $table->unsignedBigInteger('id_usuario');
+            $table->foreign('id_usuario')->references('id_usuario')->on('usuario');
             $table->timestamps();
         });
     }
