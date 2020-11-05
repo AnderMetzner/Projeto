@@ -58,7 +58,7 @@ pre {
 <p style="text-align:center;"><b>Bem vindo, ao seu blog de Futebol!!</b></p>
 <pre>
 <p style="text-align:center;"><b>Nosso objetivo é deixar você por dentro das notícias do seu time do coração
-(Séries A e B).</b></p>
+(Série A).</b></p>
 </pre>
 
 <center>
@@ -92,10 +92,10 @@ e concerteza, estarei torcendo por você.
 <center>
 <pre>
 Bora falar sobre
-as Notícias,
+as notícias,
 que estão acontecendo
-pelo mundo
-do futebol.
+por dentro do futebol
+brasoleiro!!
 </pre>
 </center>
 

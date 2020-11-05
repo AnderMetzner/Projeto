@@ -19,9 +19,6 @@ use App\Http\Controllers\HomeController;
 // });
 
 
-Route::get('/jogos', function () {
-    return view('jogos');
-});
 
 Route::get('/logincadastro', function () {
     return view('logincadastro');
@@ -39,4 +36,6 @@ Route::get('noticias', [HomeController::class, 'loadNoticias']);
 
 Route::get('jogos', [HomeController::class, 'noticiaJogos']);
 
-//Route::post('jogos', [HomeController::class, 'noticiajogo']);
+// Route::post('jogos', [HomeController::class, 'Noticia_jogo']);
+
+Route::post('cadastrojogo', [HomeController::class, 'cadastroJogos']);

@@ -38,8 +38,9 @@ body {
    <a href="/"><button>Home</button></a>
 </center>
 
-
+<center>
 <h2><u><em>{{$noticia['titulo']}}</em></u></h2>
+</center>
 {{$noticia['conteudo']}}
 
 

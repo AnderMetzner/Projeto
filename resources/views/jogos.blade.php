@@ -50,9 +50,6 @@ pre {
 <body>
 
 
-<!-- <form method="POST" action="noticiaJogos"> -->
-    @csrf
-
 
 <center>
    <a href="/"><button>Home</button></a>
@@ -62,18 +59,36 @@ pre {
 <hr>
 
 <center>
-
-    <img src="/img/brsa.jpg" alt="brasileirao2020" style="width:50%"/>
-    <hr>
+  <img src="/img/brsa.jpg" alt="brasileirao2020" style="width:30%"/>
 </center>
+<hr>
 
+<form method="POST" action="cadastrojogo">
+@csrf
 
 <center>
-<img src="/img/brsb.jpg" alt="brasileiraob2020" style="width:50%"/>
-<hr>
-<table border="1" width=70%>
-
+  <input placeholder="nome dos times" type="text" name="nome_time">
 </center>
+
+<center>
+  <input placeholder="resultado" type="text" name="resultado">
+</center>
+<center>
+<button type="submit">Publicar</button>
+</center>
+</form>
+
+<center>
+@foreach ($jogos as $val)
+<br>
+
+  <b>{{ $val['nome_time']}}</b><br>
+  <b>{{$val['resultado']}}</b><br>
+
+</br>
+@endforeach
+</center>
+
 
 </body>
 </html>

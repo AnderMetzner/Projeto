@@ -42,7 +42,7 @@ class HomeController extends Controller
         return view('noticia', compact('noticia'));
     }
 
-    public function noticiajogo (Request $req) {
+    public function cadastroJogos (Request $req) {
         $jogos = new jogos();
         $jogos->fill($req->all());
         $jogos->save();
@@ -54,5 +54,6 @@ class HomeController extends Controller
         return view('jogos', compact('jogos')); 
     }
 
-    
+
+
 }
