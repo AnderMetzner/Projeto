@@ -35,4 +35,8 @@ Route::post('noticiascadastro', [Homecontroller::class, 'noticiascadastro']);
 
 Route::get('/', [HomeController::class, 'loadHome']);
 
-Route::get('noticias',[HomeController::class, 'loadNoticias']);
+Route::get('noticias', [HomeController::class, 'loadNoticias']);
+
+Route::get('jogos', [HomeController::class, 'noticiaJogos']);
+
+//Route::post('jogos', [HomeController::class, 'noticiajogo']);

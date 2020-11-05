@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boleiragem</title>
     <link rel="shortcut icon" href="/img/icon.png" type="image/x-icon">
+
 <style>
 
 button {
@@ -48,10 +49,15 @@ pre {
 
 <body>
 
+
+<!-- <form method="POST" action="noticiaJogos"> -->
+    @csrf
+
+
 <center>
    <a href="/"><button>Home</button></a>
-   <a href="noticias"><button>Notícias</button></a>
-   <a href="jogos"><button>Jogos</button></a>
+   <a href="/noticias"><button>Notícias</button></a>
+   <a href="/jogos"><button>Jogos</button></a>
 </center>
 <hr>
 
@@ -61,193 +67,11 @@ pre {
     <hr>
 </center>
 
+
 <center>
-    <table border="1" width=70%>
-
-    <tr>
-    
-        <th>Casa</th>
-        <th>X</th>
-        <th>Visitante</th>
-
-    </tr>
-
-    <tr>
-        
-        <th>time</th>
-        <th>0-X-0</th>
-        <th>time</th>
-    
-    </tr>
-
-    <tr>
-    
-        <th>time</th>
-        <th>0-X-0</th>
-        <th>time</th>
-    
-    </tr>
-
-    <tr>
-    
-        <th>time</th>
-        <th>0-X-0</th>
-        <th>time</th>
-    
-    </tr>
-
-    <tr>
-    
-        <th>time</th>
-        <th>0-X-0</th>
-        <th>time</th>
-    
-    </tr>
-
-    <tr>
-    
-        <th>time</th>
-        <th>0-X-0</th>
-        <th>time</th>
-    
-    </tr>
-
-    <tr>
-    
-        <th>time</th>
-        <th>0-X-0</th>
-        <th>time</th>
-    
-    </tr>
-
-    <tr>
-    
-        <th>time</th>
-        <th>0-X-0</th>
-        <th>time</th>
-    </tr>
-
-    <tr>
-    
-        <th>time</th>
-        <th>0-X-0</th>
-        <th>time</th>
-    
-    </tr>
-
-    <tr>
-    
-        <th>time</th>
-        <th>0-X-0</th>
-        <th>time</th>
-    
-    </tr>
-
-    <tr>
-    
-        <th>time</th>
-        <th>0-X-0</th>
-        <th>time</th>
-    
-    </tr>
-
-
-
-</table>
-<hr>
-
 <img src="/img/brsb.jpg" alt="brasileiraob2020" style="width:50%"/>
 <hr>
 <table border="1" width=70%>
-
-<tr>
-
-    <th>Casa</th>
-    <th>X</th>
-    <th>Visitante</th>
-
-</tr>
-
-<tr>
-    
-    <th>time</th>
-    <th>0-X-0</th>
-    <th>time</th>
-
-</tr>
-
-<tr>
-
-    <th>time</th>
-    <th>0-X-0</th>
-    <th>time</th>
-
-</tr>
-
-<tr>
-
-    <th>time</th>
-    <th>0-X-0</th>
-    <th>time</th>
-
-</tr>
-
-<tr>
-
-    <th>time</th>
-    <th>0-X-0</th>
-    <th>time</th>
-
-</tr>
-
-<tr>
-
-    <th>time</th>
-    <th>0-X-0</th>
-    <th>time</th>
-
-</tr>
-
-<tr>
-
-    <th>time</th>
-    <th>0-X-0</th>
-    <th>time</th>
-
-</tr>
-
-<tr>
-
-    <th>time</th>
-    <th>0-X-0</th>
-    <th>time</th>
-</tr>
-
-<tr>
-
-    <th>time</th>
-    <th>0-X-0</th>
-    <th>time</th>
-
-</tr>
-
-<tr>
-
-    <th>time</th>
-    <th>0-X-0</th>
-    <th>time</th>
-
-</tr>
-
-<tr>
-
-    <th>time</th>
-    <th>0-X-0</th>
-    <th>time</th>
-
-</tr>
-
-</table>
 
 </center>
 

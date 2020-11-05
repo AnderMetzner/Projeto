@@ -8,6 +8,8 @@ use App\Models\usuario;
 
 use App\Models\noticias;
 
+use App\Models\jogos;
+
 class HomeController extends Controller
 {
     public function funcao (Request $req) {
@@ -38,6 +40,18 @@ class HomeController extends Controller
     public function loadNoticia (Request $req) {
         $noticia = noticias::find($req->id);
         return view('noticia', compact('noticia'));
+    }
+
+    public function noticiajogo (Request $req) {
+        $jogos = new jogos();
+        $jogos->fill($req->all());
+        $jogos->save();
+        return redirect('jogos');
+    }
+
+    public function noticiaJogos (Request $req) {
+        $jogos = jogos::get();
+        return view('jogos', compact('jogos')); 
     }
 
     
