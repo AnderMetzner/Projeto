@@ -49,59 +49,41 @@ pre {
 
 <body>
 
-
-
 <center>
    <a href="/"><button>Home</button></a>
-   <a href="/noticias"><button>Notícias</button></a>
-   <a href="/jogos"><button>Jogos</button></a>
 </center>
+
+<form method="POST" action="cadastroJogos">
+  @csrf
+
+<center>
+<h2><u><em>{{$jogo['nome_time']}}</em></u></h2>
+<h2><u><em>{{$jogo['resultado']}}</em></u></h2>
+
+</center>
+
+{{$jogo['conteudo']}}
+
+</form>
 <hr>
 
 <center>
-  <img src="/img/brsa.jpg" alt="brasileirao2020" style="width:30%"/>
+<img src="/img/placarrod.jpg" alt="placar" style="width:35%">
 </center>
-<hr>
 
-<form method="POST" action="cadastrojogo">
+<form method="POST" action="/updateJogo">
 @csrf
 
 <center>
-  <input placeholder="nome dos times" type="text" name="nome_time">
+<input type="hidden" name="id_jogo" value="{{ $jogo['id_jogo'] }}">
+<input type="text" name="titulo" value="{{$jogo['nome_time']}}">
+<input type="text" name="fonte" value="{{$jogo['resultado']}}">
 </center>
 
-<center>
-  <input placeholder="resultado" type="text" name="resultado">
-</center>
 <center>
 <button type="submit">Publicar</button>
 </center>
 </form>
-
-<!-- <center>
-@foreach ($jogos as $val)
-<br>
-
-  <b>{{ $val['nome_time']}}</b><br>
-  <b>{{$val['resultado']}}</b><br>
-
-</br>
-@endforeach
-</center> -->
-<center>
-@foreach ($jogos as $val)
-<br>
-
-  <b>{{ $val['nome_time']}}</b><br>
-
-  <a href="jogo/{{$val['id_jogos']}}"> 
-ver publicacao
-  </a>
-<hr>
-</br>
-@endforeach
-</center>
-
 
 </body>
 </html>

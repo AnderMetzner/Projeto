@@ -42,6 +42,15 @@ class HomeController extends Controller
         return view('noticia', compact('noticia'));
     }
 
+    public function updateNoticia (Request $req) {
+        $noticias = noticias::find($req['id_noticia']);
+        $noticias['titulo'] = $req['titulo'];
+        $noticias['fonte'] = $req['fonte'];
+        $noticias['conteudo'] = $req['conteudo'];
+        $noticias->save();
+        return redirect('noticia/' . $req['id_noticia']);
+    }
+
     public function cadastroJogos (Request $req) {
         $jogos = new jogos();
         $jogos->fill($req->all());
@@ -52,6 +61,19 @@ class HomeController extends Controller
     public function noticiaJogos (Request $req) {
         $jogos = jogos::get();
         return view('jogos', compact('jogos')); 
+    }
+
+    public function noticiaJogo (Request $req) {
+        $jogo = jogos::find($req->id);
+        return view('jogo', compact('jogo'));
+    }
+
+    public function updateJogo (Request $req) {
+        return jogos::find($req->id_jogo);
+        $jogos->nome_time = $req->nome_time;
+        $jogos->resultado = $req->resultado;
+        $jogos->save();
+        return redirect('jogo/' . $req['id_jogo']);
     }
 
 

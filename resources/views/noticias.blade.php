@@ -78,9 +78,11 @@ de grupos de trabalhadores ou de estudantes que se reuniam para “jogar bola”
 
 <form method="POST" action="noticiascadastro">
   @csrf
+
 <center>
   <input placeholder="titulo" type="text" name="titulo">
 </center>
+
 
 <center>
   <input placeholder="referencias" type="text" name="referencias">

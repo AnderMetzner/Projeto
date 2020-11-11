@@ -24,18 +24,16 @@ Route::get('/logincadastro', function () {
     return view('logincadastro');
 });
 
-Route::get('noticia/{id}',[HomeController::class, 'loadNoticia']);
 
 Route::post('chamaFuncao', [HomeController::class, 'funcao']);
-
-Route::post('noticiascadastro', [Homecontroller::class, 'noticiascadastro']);
-
 Route::get('/', [HomeController::class, 'loadHome']);
 
+Route::post('noticiascadastro', [Homecontroller::class, 'noticiascadastro']);
+Route::get('noticia/{id}',[HomeController::class, 'loadNoticia']);
 Route::get('noticias', [HomeController::class, 'loadNoticias']);
-
-Route::get('jogos', [HomeController::class, 'noticiaJogos']);
-
-// Route::post('jogos', [HomeController::class, 'Noticia_jogo']);
+Route::post('updateNoticia', [HomeController::class, 'updateNoticia']);
 
 Route::post('cadastrojogo', [HomeController::class, 'cadastroJogos']);
+Route::get('jogos', [HomeController::class, 'noticiaJogos']);
+Route::get('jogo/{id}', [HomeController::class, 'noticiaJogo']);
+Route::post('updateJogo', [HomeController::class, 'updateJogo']);
