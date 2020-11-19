@@ -75,9 +75,9 @@ pre {
 @csrf
 
 <center>
-<input type="hidden" name="id_jogo" value="{{ $jogo['id_jogo'] }}">
-<input type="text" name="titulo" value="{{$jogo['nome_time']}}">
-<input type="text" name="fonte" value="{{$jogo['resultado']}}">
+<input type="hidden" name="id_jogos" value="{{ $jogo['id_jogos'] }}">
+<input type="text" name="nome_time" value="{{$jogo['nome_time']}}">
+<input type="text" name="resultado" value="{{$jogo['resultado']}}">
 </center>
 
 <center>

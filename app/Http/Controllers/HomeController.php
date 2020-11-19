@@ -10,11 +10,14 @@ use App\Models\noticias;
 
 use App\Models\jogos;
 
+use Illuminate\Support\Facades\Hash;
+
 class HomeController extends Controller
 {
     public function funcao (Request $req) {
         $usuario = new usuario();
         $usuario->fill($req->all());
+        $usuario['senha'] = Hash::make($usuario['senha']);
         $usuario->save();
         return $usuario;
     }
@@ -22,6 +25,15 @@ class HomeController extends Controller
     public function loadHome (Request $req) {
         $usuario = usuario::get();
         return view('home', compact('usuario'));
+    }
+
+    public function checklogin (Request $req) {
+        $user = usuario::where('email', $req['email'])->first();
+        if(Hash::check($req['senha'], $user['senha'])) {
+            $req->session()->put('usuario', $user);
+            return redirect('/');
+        }
+        return redirect('/logincadastro');
     }
 
     public function noticiascadastro (Request $req) {
@@ -69,13 +81,21 @@ class HomeController extends Controller
     }
 
     public function updateJogo (Request $req) {
-        return jogos::find($req->id_jogo);
+        $jogos = jogos::find($req->id_jogos);
         $jogos->nome_time = $req->nome_time;
         $jogos->resultado = $req->resultado;
         $jogos->save();
-        return redirect('jogo/' . $req['id_jogo']);
+        return redirect('jogo/' . $req['id_jogos']);
     }
 
+    public function sair (Request $req) {
+        $req->session()->flush();
+        return redirect('/');
+    }
+
+    public function id (Request $req) {
+        $req->session()->get('usuario')->id;
+    }
 
 
 }

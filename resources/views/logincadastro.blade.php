@@ -52,6 +52,23 @@ div {
 
 <body>
 
+@if (Session::has('usuario'))
+  {{ Session::get('usuario')->nome }}
+@endif
+
+<center>
+<form method="POST" action="checklogin">
+@csrf
+
+<input type="email" name="email">
+<input type="password" name="senha">
+
+<button type="submit">Cadastrar</button>
+
+</form>
+</center>
+
+
 <center>
 <a href="/"><button>Home</button></a>
 </center>
@@ -108,6 +125,7 @@ Telefone:
 <center>
 <img src="/img/bolei.png" alt="boleiragem" style="width:30%">
 </center>
+
 
 </form>
 </body>
