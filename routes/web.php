@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Middleware\CheckLogin;
+use App\Http\Middleware\ChecklogOut;
 
 /*
 |--------------------------------------------------------------------------
@@ -46,3 +47,9 @@ Route::middleware([CheckLogin::class])->group(function () {
 Route::get('sair', [HomeController::class, 'sair']);
 
 Route::get('id', [HomeController::class, 'id']);
+
+Route::middleware([CheckLogOut::class])->group(function () {
+    Route::get('/logincadastro', function () {
+        return view('logincadastro');
+    });
+});

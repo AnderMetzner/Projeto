@@ -38,8 +38,8 @@ class HomeController extends Controller
 
     public function noticiascadastro (Request $req) {
         $noticias = new noticias();
-        $req['id_usuario'] = 1;
         $noticias->fill($req->all());
+        $noticias['id_usuario'] = $req->session()->get('usuario')->id_usuario;
         $noticias->save();
         return redirect('noticias');
     }

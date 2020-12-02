@@ -5,7 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 
-class CheckLogin
+class ChecklogOut
 {
     /**
      * Handle an incoming request.
@@ -17,9 +17,9 @@ class CheckLogin
     public function handle(Request $request, Closure $next)
     {
         if ($request->session()->has('usuario')) {
-            return $next($request);
+            return redirect ('/');
         }
-        return redirect('/');
+        return $next($request);
     }
 
 }
