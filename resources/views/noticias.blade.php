@@ -54,7 +54,9 @@ de grupos de trabalhadores ou de estudantes que se reuniam para “jogar bola”
   <input placeholder="conteudo" type="text" name="conteudo">
 </center>
 
+  
   <button type="submit">Publicar</button>
+
 </form>
 
 </center>

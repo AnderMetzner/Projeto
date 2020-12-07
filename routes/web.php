@@ -42,6 +42,7 @@ Route::middleware([CheckLogin::class])->group(function () {
     Route::get('noticia/{id}',[HomeController::class, 'loadNoticia']);
     Route::get('noticias', [HomeController::class, 'loadNoticias']);
     Route::post('updateNoticia', [HomeController::class, 'updateNoticia']);
+    Route::get('deleteNoticia/{id}', [HomeController::class, 'deleteNoticia']);
 });
 
 Route::get('sair', [HomeController::class, 'sair']);

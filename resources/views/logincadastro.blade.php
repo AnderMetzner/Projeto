@@ -17,55 +17,43 @@
 <button type="submit">Cadastrar</button>
 
 </form>
-</center>
+<hr>
 
 
 <form method="POST" action="chamaFuncao">
 @csrf
 
-<center>
 <div class="c">
 Nome:
-<input type="text" name="nome">
+<input placeholder="nome" type="text">
 </div>
-</center>
 
-<center>
 <div class="c">
 Senha:
-<input type="password" name="senha">
+<input placeholder="senha" type="password">
 </div>
-</center>
 
-<center>
 <div class="c">
 Email:
-<input type="email" name="email">
+<input placeholder="email" type="email">
 </div>
-</center>
 
-<center>
 <div class="c">
 Data de nascimento:
-<input type="date" name="data_nascimento">
+<input placeholder="data de nascimento" type="date">
 </div>
-</center>
 
-<center>
 <div class="c">
 Telefone:
-<input type="number" name="telefone">
+<input placeholder="telefone" type="number">
 </div>
-</center>
 
-<center>
-<button type="submit">Cadastrar</button>
-</center>
+<button  type="submit">Cadastrar</button>
 
 <center>
 <img src="/img/bolei.png" alt="boleiragem" style="width:30%">
 </center>
-
+<hr>
 
 </form>
 

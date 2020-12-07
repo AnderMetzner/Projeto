@@ -15,6 +15,11 @@
 </form>
 <hr>
 
+<a href="/deleteNoticia/{{$noticia['id_noticia']}}">
+Deletar
+</a>
+
+
 <form method="POST" action="/updateNoticia">
 @csrf
 

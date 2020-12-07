@@ -62,7 +62,7 @@ class HomeController extends Controller
         $noticias->save();
         return redirect('noticia/' . $req['id_noticia']);
     }
-
+     
     public function cadastroJogos (Request $req) {
         $jogos = new jogos();
         $jogos->fill($req->all());
@@ -97,5 +97,9 @@ class HomeController extends Controller
         $req->session()->get('usuario')->id;
     }
 
+    public function deleteNoticia ($id) {
+        $noticia = noticia::find($id)->delete();
+        return redirect('noticias');
+    }
 
 }

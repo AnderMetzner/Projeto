@@ -29,11 +29,14 @@
 
 <center>
    <a href="/"><button>Home</button></a>
-   <a href="logincadastro"><button>Login/cadastro</button></a>
+   @if (!Session::has('usuario'))
+  <a href="logincadastro"><button>Login/cadastro</button></a>
+  @endif
    <a href="noticias"><button>Notícias</button></a>
    <a href="jogos"><button>Jogos</button></a>
 </center>
 <hr>
+
 
     @yield('pagina')
 
